@@ -1,6 +1,7 @@
 import sys
 
 from settings import Settings
+from ship import Ship
 
 import pygame
 
@@ -15,6 +16,8 @@ class AlienInvasion:
         self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
         pygame.display.set_caption("Alien Invasion")
 
+        #self.ship = Ship(self)
+
     def run_game(self):
         """Start the main loop for the game."""
         while True:
@@ -28,6 +31,7 @@ class AlienInvasion:
             
             #Make the most recently drawn screen visible
             pygame.display.flip()
+            #self.ship.blitme()
 
 if __name__ == '__main__':
     #Make a game instance and run the game.
